@@ -5,6 +5,8 @@ import java.util.Hashtable;
 
 public class NumberSum {
 
+    //O(n) time | O(n) space
+    //there's an O(n)^2 time O(1) space using loop
     public Integer[] twoNumberSum(Integer targetSum, Integer[] array){
         //input an integer as target sum and an integer array
         //processing: if 2 items of the array sum to the target
