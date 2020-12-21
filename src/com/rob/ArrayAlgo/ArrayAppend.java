@@ -1,4 +1,4 @@
-package com.rob;
+package com.rob.ArrayAlgo;
 import java.util.Arrays;
 
 public class ArrayAppend {
