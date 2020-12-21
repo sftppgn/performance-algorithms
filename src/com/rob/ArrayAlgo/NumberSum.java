@@ -1,4 +1,6 @@
-package com.rob;
+package com.rob.ArrayAlgo;
+
+import com.rob.ArrayAppend;
 
 import java.lang.reflect.Array;
 import java.util.Hashtable;

@@ -1,4 +1,4 @@
-package com.rob;
+package com.rob.ArrayAlgo;
 
 import java.util.*;
 import java.util.Arrays;
