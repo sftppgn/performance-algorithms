@@ -1,28 +1,37 @@
 package com.rob.SortAlgo;
 
-import java.util.Collections;
+//O(nLog(n)) time | O(Log(n)) space
 
-//O(nLog(n)) time | O(Log(n) space
-
+//summary of objective:
+//        pick 1 val to be pivot
+//        iterate through rest of array, sort in respect to pivot - ie everything smaller to the left, greater to the right
+//        the pivot will be in it's final sorted position after first iteration
+//        reapply to the subarrays on each sides of the pivot, until done
+//        we have 3 points - the pivot, the left pointer, and the right pointer
+//        check if the left is greater than pivot, check if right is smaller, if so swap them
+//        move left pointer right, move right pointer left
+//        when left pointer > right:
+//        move pivot to where the right pointer was at
+//        we've created 2 subarrays on each side of the pivot, redo the process on the smaller subarray first
 public class QuickSort {
-    public static Integer[] quickSort(Integer[] array){
+    public static int[] quickSort(int[] array){
         array = quickSortHelper(array, 0, array.length -1);
         return array;
     }
 
-    private static Integer[] quickSortHelper(Integer[] array, Integer startIdx, Integer endIdx){
+    private static int[] quickSortHelper(int[] array, int startIdx, int endIdx){
         //array length 1
         if (startIdx >=endIdx){
             return array;
         }
-        Integer pivotIdx = startIdx;
-        Integer leftIdx = startIdx+1;
-        Integer rightIdx = endIdx;
-        Integer leftIdxSwap = leftIdx;
-        Integer rightIdxSwap = rightIdx;
-        Integer pivotIdxSwap = 0;
-        Integer leftSubArrayLength =0;
-        Integer rightSubArrayLength =0;
+        int pivotIdx = startIdx;
+        int leftIdx = startIdx+1;
+        int rightIdx = endIdx;
+        int leftIdxSwap = leftIdx;
+        int rightIdxSwap = rightIdx;
+        int pivotIdxSwap = 0;
+        int leftSubArrayLength =0;
+        int rightSubArrayLength =0;
         Boolean leftSubArrayIsSmaller;
 
         while(rightIdx>= leftIdx){
@@ -52,7 +61,7 @@ public class QuickSort {
     array[rightIdx] = pivotIdxSwap;
 
     //call the above again on the 2 subarrays, smaller first
-    //order in array: ^startIdx pivotIdx rightIdx endidx$
+    //order in array: ^startIdx pivotIdx rightIdx endIdx$
     leftSubArrayLength = rightIdx - 1 - startIdx;
     rightSubArrayLength = endIdx - (rightIdx +1);
 

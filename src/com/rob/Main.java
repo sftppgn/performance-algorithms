@@ -14,10 +14,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Integer array[]= {8,6,7,5,3,0,9,4,2};
+        int array[]= {8,6,7,5,3,0,9,4,2};
         QuickSort quickSortTest = new QuickSort();
         array = quickSortTest.quickSort(array);
-        for (Integer val: array){
+        for (int val: array){
             System.out.print(val);
         }
 
