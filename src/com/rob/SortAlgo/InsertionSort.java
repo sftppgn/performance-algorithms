@@ -15,10 +15,8 @@ public class InsertionSort {
                 Collections.swap(array, counter, counter-1);
                 counter-=1;
             }
-
         }
-
-            return array;
+    return array;
     }
 
 }

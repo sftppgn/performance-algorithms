@@ -3,6 +3,7 @@ package com.rob;
 import com.rob.ArrayAlgo.ValidateSubsequence;
 import com.rob.SortAlgo.BubbleSort;
 import com.rob.SortAlgo.InsertionSort;
+import com.rob.SortAlgo.QuickSort;
 import com.rob.SortAlgo.SelectionSort;
 
 import java.lang.reflect.Array;
@@ -13,6 +14,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Integer array[]= {8,6,7,5,3,0,9,4,2};
+        QuickSort quickSortTest = new QuickSort();
+        array = quickSortTest.quickSort(array);
+        for (Integer val: array){
+            System.out.print(val);
+        }
 
 //        ArrayList<Integer> testArrayList = new ArrayList<>();
 //        testArrayList = new ArrayList<>(Arrays.asList(8, 6, 7, 5, 3, 0, 9, 4));
