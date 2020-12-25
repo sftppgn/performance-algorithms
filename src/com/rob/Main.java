@@ -6,6 +6,8 @@ import com.rob.SortAlgo.BubbleSort;
 import com.rob.SortAlgo.InsertionSort;
 import com.rob.SortAlgo.QuickSort;
 import com.rob.SortAlgo.SelectionSort;
+import com.rob.String.PalindromeCheck;
+import com.rob.String.isPalindrome;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -15,12 +17,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String testString = "eieio";
+
+        isPalindrome testPalindrome = new isPalindrome();
+        System.out.print(testPalindrome.isPalindrome(testString));
+
         //int array[]= {8,6,7,5,3,0,9,4,-2,2,10,-2,20};
-        int array[]= {-2,2,10,-2,20,-2,-2};
-        int result = 0;
-        Kadane kadaneTest = new Kadane();
-        result = kadaneTest.sublistKadane(array);
-        System.out.println(result);
+        //int array[]= {-2,2,10,-2,20,2,4};
+//        ArrayList<Integer> testArrayList = new ArrayList<>();
+//        testArrayList = new ArrayList<>(Arrays.asList(8, 6, 7, 5, 3, 0, 9, 4));
+//        int result = 0;
+//        Kadane kadaneTest = new Kadane();
+//        result = kadaneTest.kadaneArrayList(testArrayList);
+//        System.out.println(result);
 
 //        int array[]= {8,6,7,5,3,0,9,4,2};
 //        QuickSort quickSortTest = new QuickSort();
