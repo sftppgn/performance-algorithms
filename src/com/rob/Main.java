@@ -1,6 +1,7 @@
 package com.rob;
 
 import com.rob.ArrayAlgo.ValidateSubsequence;
+import com.rob.FamousMisc.Kadane;
 import com.rob.SortAlgo.BubbleSort;
 import com.rob.SortAlgo.InsertionSort;
 import com.rob.SortAlgo.QuickSort;
@@ -14,12 +15,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int array[]= {8,6,7,5,3,0,9,4,2};
-        QuickSort quickSortTest = new QuickSort();
-        array = quickSortTest.quickSort(array);
-        for (int val: array){
-            System.out.print(val);
-        }
+        //int array[]= {8,6,7,5,3,0,9,4,-2,2,10,-2,20};
+        int array[]= {-2,2,10,-2,20,-2,-2};
+        int result = 0;
+        Kadane kadaneTest = new Kadane();
+        result = kadaneTest.sublistKadane(array);
+        System.out.println(result);
+
+//        int array[]= {8,6,7,5,3,0,9,4,2};
+//        QuickSort quickSortTest = new QuickSort();
+//        array = quickSortTest.quickSort(array);
+//        for (int val: array){
+//            System.out.print(val);
+//        }
 
 //        ArrayList<Integer> testArrayList = new ArrayList<>();
 //        testArrayList = new ArrayList<>(Arrays.asList(8, 6, 7, 5, 3, 0, 9, 4));
